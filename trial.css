@@ -1,0 +1,174 @@
+
+:root {
+    --dark-red: #741b1b;
+    --light-beige: #efe2c3;
+    --deep-brown: #3b1e1b;
+    --cream: #f5e8c7;
+    --rich-red: #991b1b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--dark-red);
+    padding: 15px 30px;
+    color: var(--cream);
+    position: relative;
+}
+
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 50px; 
+    width: auto;
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: var(--cream);
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--light-beige);
+}
+
+
+@media screen and (max-width: 768px) {
+    .logo-container img {
+        height: 40px; 
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: var(--dark-red);
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+}
+
+
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 4px;
+    background: var(--cream);
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 40px;
+    background: var(--light-beige);
+}
+
+.card {
+    background: var(--cream);
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+    
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin: 15px 0;
+    color: var(--deep-brown);
+}
+
+.card p {
+    color: var(--deep-brown);
+    font-size: 14px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: var(--rich-red);
+    color: var(--cream);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: var(--dark-red);
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: var(--dark-red);
+        width: 100%;
+        text-align: center;
+    }
+
+}
